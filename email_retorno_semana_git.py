@@ -108,7 +108,7 @@ def cria_tabela_carteira(df,style):
 comeco='2023-08-14'
 final='2023-08-18'
 
-caminho_matheus=r'C:\Users\matheustc\Desktop\Python\Programacao\mercado_financeiro\posicao-2023-08-19-22-13-12.xlsx'
+caminho_B3=r''#Caminho arquivo carteira da area do investidor B3
 
 style='''<head>
 <title>Tabela Bonita</title>
@@ -143,17 +143,16 @@ style='''<head>
 </head>'''
 
 
-de='entretenimentomtv@gmail.com'
-para='matheustavaresc@gmail.com'
+de=''#Email que vai mandar
+para=''#Email que vai receber
 txt=''
-retorno=retorno_ativos_carteira(caminho_matheus,comeco,final)
+retorno=retorno_ativos_carteira(caminho_B3,comeco,final)
 txt+=cria_tabela_email_maior_menor(retorno,style)
 txt+=cria_tabela_carteira(retorno,style)
-#print(retorno.columns)
 
-with open(r'C:\Users\matheustc\Desktop\Python\Programacao\mercado_financeiro\senha.txt') as f:
+with open(r'') as f:#Arquivo com a senha para apps do email
     senha=f.readlines()
     f.close
 
 senha_do_email=senha[0]
-#enviar_email(de,para,senha_do_email,txt)
+enviar_email(de,para,senha_do_email,txt)
