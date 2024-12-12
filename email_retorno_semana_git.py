@@ -174,7 +174,7 @@ def cria_tabela_dividendos(df,style):
 final = datetime.now().date() + timedelta(days=-1) # Programa rodando no sábado, pega o dia de sexta-feira
 comeco = final + timedelta(days=-4) # Programa rodando no sábado, pega o dia de segunda-feira
 
-caminho_B3=r''#Caminho arquivo carteira da area do investidor B3 .xlsx
+caminho_B3=r''#Caminho arquivo carteira da area do investidor B3
 
 style='''<head>
 <title>Tabela Bonita</title>
@@ -221,7 +221,7 @@ txt+=cria_tabela_resumo(retorno,style,str(comeco),str(final))
 txt+=cria_tabela_email_maior_menor(retorno,style)
 txt+=cria_tabela_carteira(retorno,style)
 
-with open(r'') as f:#Arquivo com a senha para apps do email .txt
+with open(r'') as f:#Arquivo com a senha para apps do email
     senha=f.readlines()
     f.close
 
